@@ -1,0 +1,92 @@
+/* Reset and base styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #f7f7f7; color: #29b184; }
+
+/* Navbar */
+.navbar {
+  display: flex; justify-content: space-between; align-items: center;
+  background: #1957d2; color: palevioletred; padding: 1rem 2rem;
+}
+.navbar .logo { font-weight: bold; font-size: 1.3rem; }
+.nav-links { list-style: none; display: flex; gap: 1rem; }
+.nav-links li a { color: #fff; text-decoration: none; transition: color 0.3s;}
+.nav-links li a:hover { color: #ffcc00; }
+
+/* Hero Section */
+.hero {
+  text-align: center; padding: 4rem 1rem; background: #e1e7fa;
+  animation: fadeInDown 1s;
+}
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+.hero button {
+  background: #1957d2; color: #fff; padding: 0.7rem 2rem;
+  border: none; border-radius: 5px; cursor: pointer;
+  transition: background 0.3s;
+}
+.hero button:hover { background: #133b95; }
+
+/* Features Section */
+.features {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;
+  padding: 3rem 1rem; background: #fff;
+}
+.feature-card {
+  background: #f0f4ff; padding: 2rem 1rem;
+  border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  flex: 1 1 260px; max-width: 300px; text-align: center;
+  transition: transform 0.25s;
+}
+.feature-card:hover { transform: translateY(-5px) scale(1.05); }
+
+/* Footer */
+footer {
+  background: #1957d2; color: #fff;
+  text-align: center; padding: 1rem; margin-top: 2rem;
+  font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+  .features { flex-direction: column; align-items: center; }
+  .navbar { flex-direction: column; gap: 0.8rem; }
+}
+@media (max-width: 500px) {
+  .hero h1 { font-size: 1.7rem; }
+  .feature-card { padding: 1.2rem; }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.feature-card {
+  background: #f0f4ff;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  flex: 1 1 260px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.25s, background 0.25s;
+  cursor: pointer; /* Show pointer, good for touch and mouse */
+}
+
+/* Change color and add transform when hovered (desktop) */
+.feature-card:hover {
+  background: #ffe082;   /* A soft yellow color, change as you like */
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* Change color for active (touch & mouse click) */
+.feature-card:active {
+  background: #ffd54f;   /* Slightly deeper yellow on touch/click */
+}
+
+/* For accessibility/touch navigation (keyboard focus too) */
+.feature-card:focus {
+  outline: 2px solid #1957d2;
+  background: #bbdefb;   /* Light blue on focus */
+}

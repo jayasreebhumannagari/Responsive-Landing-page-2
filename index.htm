@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Landing Page</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">MySite</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="hero" class="hero">
+    <h1>Welcome to MySite!</h1>
+    <p>Your solution for modern web experiences.</p>
+    <button onclick="window.scrollTo({top: document.getElementById('features').offsetTop, behavior:'smooth'})">Learn More</button>
+  </section>
+  <section id="features" class="features">
+    <div class="feature-card">
+      <h3>Fast</h3>
+      <p>Lightning-fast load times for seamless experiences.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Responsive</h3>
+      <p>Looks great on all devices with mobile-first design.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Easy</h3>
+      <p>User-friendly and accessible for everyone!</p>
+    </div>
+  </section>
+  <footer id="footer">
+    <p>&copy; 2025 MySite. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
